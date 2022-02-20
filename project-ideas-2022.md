@@ -120,3 +120,19 @@ Currently PMLs are used as absorbing boundaries to effectively and efficiently t
 **Length:** 175hrs
 
 **Mentor(s):** Dr Antonis Giannopoulos (antonis@gprmax.com)
+
+
+## 9. Clutter Simulation for the Mars Radars SHARAD and MARSIS 
+
+The aim of this project is to tune, organise, parallelise and automate an existing code that generates a radar cluttergram based on A) topographic data from Mars and B) the orbit of the sattelite. Currently there is no available software that does that, and planetary scientists need to develop a code from scratch, which is often unnatainable due to lack of background on computational electrodynamics. This compromises research on that area and makes interpretation of planetary satelite radar exclusive to research groups with expertise in computational electrodynamics.
+
+A user-friendly, automatic and parellised open-source simulation tool will greatly advance research on planetary radar i.e. exploring Mars subsurface for subglacial lakes, lava tubes, caves etc. 
+
+**Skills required:** Python.
+
+**Difficulty:** Medium
+
+**Length:** 350hrs
+
+**Mentor(s):** Dr Iraklis Giannakis (giannakis.iraklis@gmail.com)
+
