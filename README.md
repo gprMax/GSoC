@@ -1,5 +1,4 @@
-<img src="images/gprMax_logo.png" height="100">
-<img src="images/GSoC2022_logo.png" height="100">
+<img src="images/gprMax_logo.png" height="75"><img src="images/GSoC2022_logo.png" height="75">
 
 This repo is for materials relating to the participation of [gprMax](https://www.gprmax.com>) in [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/).
 
