@@ -2,7 +2,15 @@
 
 gprMax is planning to participate in the [Google Summer of Code](https://summerofcode.withgoogle.com) 2022 program, following a successful participation in 2019 and 2021. 
 
-Below is list of some potential project ideas (in no particular order). These ideas have been discussed with all mentors in our team: Dr Craig Warren, Dr Antonis Giannopoulos, Dr Iraklis Giannakis, Dr John Hartley, Ms Rania Patsia, Mr Dimitris Angelis. If a project is successfully selected you will be allocated a primary mentor and supported by the rest of the team. If you are interested in learning more about a particular project idea please contact us using [info@gprmax.com](mailto:iinfo@gprmax.com) or through our [gprMax GSoC2022 Gitter channel](https://gitter.im/gprMax/GSoC2022?source=orgpage). 
+Below is list of some potential project ideas (in no particular order). These ideas have been discussed with all mentors in our team: 
+- Dr Craig Warren
+- Dr Antonis Giannopoulos
+- Dr Iraklis Giannakis
+- Dr John Hartley
+- Ms Rania Patsia
+- Mr Dimitris Angelis
+
+If a project is successfully selected you will be allocated a primary mentor and supported by the rest of the team. If you are interested in learning more about a particular project idea please contact us using [info@gprmax.com](mailto:iinfo@gprmax.com) or through our [gprMax GSoC2022 Gitter channel](https://gitter.im/gprMax/GSoC2022?source=orgpage). 
 
 ## 1. Multi-GPU model execution
 
@@ -97,7 +105,11 @@ Currently PMLs are used as absorbing boundaries to effectively and efficiently t
 
 ## 8. Clutter Simulation for the Mars Radars SHARAD and MARSIS 
 
-The aim of this project is to tune, organise, parallelise and automate an existing code that generates a radar cluttergram based on A) topographic data from Mars and B) the orbit of the sattelite. Currently there is no available software that does that, and planetary scientists need to develop a code from scratch, which is often unnatainable due to lack of background on computational electrodynamics. This compromises research on that area and makes interpretation of planetary satelite radar exclusive to research groups with expertise in computational electrodynamics.
+The aim of this project is to tune, organise, parallelise, and automate existing code that generates a radar cluttergram based on:
+- topographic data from Mars 
+- the orbit of the sattelite
+
+Currently there is no available software that does this, and planetary scientists need to develop a code from scratch, which is often unnatainable due to lack of background on computational electrodynamics. This compromises research on that area and makes interpretation of planetary satelite radar exclusive to research groups with expertise in computational electrodynamics.
 
 A user-friendly, automatic and parellised open-source simulation tool will greatly advance research on planetary radar i.e. exploring Mars subsurface for subglacial lakes, lava tubes, caves etc. 
 
