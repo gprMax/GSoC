@@ -1,6 +1,8 @@
 # GSoC 2022 - Project Ideas List
 
-gprMax is planning to participate in the [Google Summer of Code](https://summerofcode.withgoogle.com) 2022 program, following a successful participation in 2019 and 2021. Here is list of some potential project ideas (in no particular order):
+gprMax is planning to participate in the [Google Summer of Code](https://summerofcode.withgoogle.com) 2022 program, following a successful participation in 2019 and 2021. 
+
+Below is list of some potential project ideas (in no particular order). These ideas have been discussed with all mentors in our team: Dr Craig Warren, Dr Antonis Giannopoulos, Dr Iraklis Giannakis, Dr John Hartley, Ms Rania Patsia, Mr Dimitris Angelis. If a project is successfully selected you will be allocated a primary mentor and supported by the rest of the team. If you are interested in learning more about a particular project idea please contact us using [info@gprmax.com](mailto:iinfo@gprmax.com) or through our [gprMax GSoC2022 Gitter channel](https://gitter.im/gprMax/GSoC2022?source=orgpage). 
 
 ## 1. Multi-GPU model execution
 
@@ -8,43 +10,37 @@ The aim of the project is to investigate multi-GPU model execution, i.e. allow a
 
 Currently with our GPU-based (PyCuda) solver, a model must fit within the memory of a single GPU. Simulations are becoming ever larger and more complex, which often means their memory requirements exceed that available on a single GPU. A solution is required to allow a model to execute (and share memory) across multiple GPUs. This may involve a MPI type domain decomposition or simpler memory sharing approach.
 
-**Skills required:** Python, CUDA.
+**Skills required:** Python, CUDA
 
 **Difficulty:** Hard
 
 **Length:** 350hrs
 
-**Mentor(s):** Dr Craig Warren (craig@gprmax.com) and Dr Antonis Giannopoulos (antonis@gprmax.com) 
 
+## 2. Google Colab / Jupyter notebook integration
 
-## 2. Web-based framework for model building
+The aim of this project is to allow gprMax to run on Google Colab or a Jupyter notebook type environment.
 
-The aim of this project is to develop a web-based framework that allows models to be graphically built.
+The ability to run gprMax on Google Colab (or a Jupyter notebook type environment) would be very beneficial to many of our users, especially the access to GPU compute resource. Additional tools and scripts will be required to enable this functionality, particularly the ability to view [Visualization Toolkit (VTK)](https://vtk.org) format geometry information with a notebook environment.
 
-Many models, especially for Ground Penetrating Radar (GPR), can be easily specified using a text-based input file, which is currently what is done. This approach can be beneficial when executing large simulations in [high-performance computing (HPC)](https://en.wikipedia.org/wiki/Supercomputer) environments. However, there are also simulations that require fine, complex details to be modelled or where existing geometries already exist (for example in CAD format). In these cases a graphical-based model building environment would be beneficial, and one that does not require bespoke software to be installed. A web-based framework would therefore be a very useful for model building and construction.
-
-**Skills required:** Python, web frameworks for 2D/3D visualisation.
+**Skills required:** Python, familiarity with VTK/Paraview would beneficial.
 
 **Difficulty:** Medium
 
 **Length:** 350hrs
 
-**Mentor(s):** Dr John Hartley (johnmatthewhartley@gmail.com) and Dimitris Angelis ()
 
+## 3. De-coupled model building and execution
 
-## 3. Independent model building and execution
-
-The aim of this project is to investigate separating model building and execution phases.
+The aim of this project is to investigate de-coupling the model building and execution phases.
 
 Currently the modeling building phase takes place (which is mostly a serial process) on CPU. Once that is complete the model can then be executed using either the CPU-based (OpenMP) or GPU-based (CUDA) solver. The next model cannot be built until the previous model has finished executing, and this can sometimes cause a performance bottleneck. If the model building and execution phases could be made more independent and a queuing system implemented then this may solve this performance problem.
 
-**Skills required:** Python, CUDA.
+**Skills required:** Python, CUDA
 
 **Difficulty:** Medium
 
 **Length:** 350hrs
-
-**Mentor(s):** Dr Craig Warren (craig@gprmax.com)
 
 
 ## 4. Optimising GPU performance
@@ -53,13 +49,11 @@ The aim of the project is to optimise our CUDA-based solver for GPUs. The perfor
 
 The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wikipedia.org/wiki/Finite-difference_time-domain_method) method, which has shown significant performance benefits when parallelised – particularly on GPU. We have GPU-based solver which uses NVIDIA CUDA (with PyCUDA). The speed-up is significant (x30 compared to parallelised CPU), but we would like to further tune and optimise the performance. 
 
-**Skills required:** Python, CUDA.
+**Skills required:** Python, CUDA
 
 **Difficulty:** Medium
 
 **Length:** 175hrs
-
-**Mentor(s):** Dr Craig Warren (craig@gprmax.com)
 
 
 ## 5. Improved installation tools
@@ -74,8 +68,6 @@ gprMax is predominately written in Python, but some of the performance-critical 
 
 **Length:** 175hrs
 
-**Mentor(s):** Dr John Hartley (johnmatthewhartley@gmail.com)
-
 
 ## 6. Comprehensive test and benchmarking suite
 
@@ -89,25 +81,8 @@ Currently gprMax includes a series of tests that verify specific simulation resu
 
 **Length:** 350hrs
 
-**Mentor(s):** Dr Craig Warren (craig@gprmax.com) 
 
-
-## 7. Web-based geometry visualisation
-
-The aim of this project is create a web-based viewer for the visualisation of model geometries.
-
-Being able to visualise and check the geometry and materials of models before running simulations is vital. It minimises the risk of wasting computational resources by running incorrect models. Currently gprMax uses the [Visualization Toolkit (VTK)](https://vtk.org) format to store geometry information to file, and [Paraview](https://www.paraview.org) for visualisation. This allows the geometrical information to be viewed but does not easily permit material information from the model to be checked. A tighter integration is required, possibly considering a browser-based solution within Jupyter notebooks.
-
-**Skills required:** Python, Jupyter notebooks, familiarity with VTK and Paraview would beneficial.
-
-**Difficulty:** Medium
-
-**Length:** 175hrs
-
-**Mentor(s):** Dr John Hartley (johnmatthewhartley@gmail.com)
-
-
-## 8. Arbitary placement of Perfectly Matched Layer (PML) material
+## 7. Arbitary placement of Perfectly Matched Layer (PML) material
 
 The aim of this project is to provide the ability for users to use Perfectly Matched Layer (PML) material with geometry primitives, i.e. PML material should not be confined to being used at the boundaries of the domain.
 
@@ -119,20 +94,15 @@ Currently PMLs are used as absorbing boundaries to effectively and efficiently t
 
 **Length:** 175hrs
 
-**Mentor(s):** Dr Antonis Giannopoulos (antonis@gprmax.com)
 
-
-## 9. Clutter Simulation for the Mars Radars SHARAD and MARSIS 
+## 8. Clutter Simulation for the Mars Radars SHARAD and MARSIS 
 
 The aim of this project is to tune, organise, parallelise and automate an existing code that generates a radar cluttergram based on A) topographic data from Mars and B) the orbit of the sattelite. Currently there is no available software that does that, and planetary scientists need to develop a code from scratch, which is often unnatainable due to lack of background on computational electrodynamics. This compromises research on that area and makes interpretation of planetary satelite radar exclusive to research groups with expertise in computational electrodynamics.
 
 A user-friendly, automatic and parellised open-source simulation tool will greatly advance research on planetary radar i.e. exploring Mars subsurface for subglacial lakes, lava tubes, caves etc. 
 
-**Skills required:** Python.
+**Skills required:** Python, MATLAB
 
 **Difficulty:** Medium
 
 **Length:** 350hrs
-
-**Mentor(s):** Dr Iraklis Giannakis (giannakis.iraklis@gmail.com)
-
