@@ -10,6 +10,20 @@ Below is list of some potential project ideas (in no particular order). These id
 
 If a project is successfully selected you will be allocated a primary mentor and supported by the rest of the team. If you are interested in learning more about a particular project idea please contact us using [info@gprmax.com](mailto:info@gprmax.com) or on our [gprMax Slack channel](https://gprmax-fdtd.slack.com). 
 
+
+## 1. Optimisation of GPU performance
+
+The aim of the project is to optimise our CUDA-based solver for GPUs. The performance (speed) of the solver is a critical feature as simulations become ever larger and more complex.
+
+The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wikipedia.org/wiki/Finite-difference_time-domain_method) method, which has shown significant performance benefits when parallelised – particularly on GPU. We have GPU-based solver which uses NVIDIA CUDA (with PyCUDA). The speed-up is significant (x30 compared to parallelised CPU), but we would like to further tune and optimise the performance. 
+
+**Skills required:** Python, CUDA
+
+**Difficulty:** Medium
+
+**Length:** 175hrs
+
+<!--
 ## 1. Multi-GPU model execution
 
 The aim of the project is to investigate multi-GPU model execution, i.e. allow a model to execute (and share memory) across multiple GPUs.
@@ -21,6 +35,7 @@ Currently with our GPU-based (PyCuda) solver, a model must fit within the memory
 **Difficulty:** Hard
 
 **Length:** 350hrs
+-->
 
 
 ## 2. Optimisation for Apple silicon CPUs
@@ -60,16 +75,3 @@ Currently the modeling building phase takes place (which is mostly a serial proc
 **Difficulty:** Hard
 
 **Length:** 350hrs
-
-
-## 5. Optimisation of GPU performance
-
-The aim of the project is to optimise our CUDA-based solver for GPUs. The performance (speed) of the solver is a critical feature as simulations become ever larger and more complex.
-
-The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wikipedia.org/wiki/Finite-difference_time-domain_method) method, which has shown significant performance benefits when parallelised – particularly on GPU. We have GPU-based solver which uses NVIDIA CUDA (with PyCUDA). The speed-up is significant (x30 compared to parallelised CPU), but we would like to further tune and optimise the performance. 
-
-**Skills required:** Python, CUDA
-
-**Difficulty:** Medium
-
-**Length:** 175hrs
