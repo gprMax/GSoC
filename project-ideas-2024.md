@@ -11,11 +11,24 @@ Below is list of some potential project ideas (in no particular order). These id
 If a project is successfully selected you will be allocated a primary mentor and supported by the rest of the team. If you are interested in learning more about a particular project idea please contact us using [info@gprmax.com](mailto:info@gprmax.com) or on our [gprMax Slack channel](https://gprmax-fdtd.slack.com). 
 
 
-## 1. Optimisation of GPU performance
+## 1. Apple Metal port
 
-The aim of the project is to optimise our CUDA-based solver for GPUs. The performance (speed) of the solver is a critical feature as simulations become ever larger and more complex.
+The aim of the project is to develop an [Apple Metal](https://developer.apple.com/metal/) port. The performance (speed) of the solver is a critical feature as simulations become ever larger and more complex.
 
-The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wikipedia.org/wiki/Finite-difference_time-domain_method) method, which has shown significant performance benefits when parallelised – particularly on GPU. We have GPU-based solver which uses NVIDIA CUDA (with PyCUDA). The speed-up is significant (x30 compared to parallelised CPU), but we would like to further tune and optimise the performance. 
+The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wikipedia.org/wiki/Finite-difference_time-domain_method) method, which has shown significant performance benefits when parallelised – particularly on GPU. The project will require porting existing code, either from the PyCUDA or PyOpenCL-based solvers we already have, to the Apple Metal framework.
+
+**Skills required:** Python, C
+
+**Difficulty:** Medium
+
+**Length:** 350hrs
+
+
+## 2. Optimisation of CUDA and OpenCL performance
+
+The aim of the project is to optimise our CUDA and OpenCL based solvers. The performance (speed) of the solver is a critical feature as simulations become ever larger and more complex.
+
+The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wikipedia.org/wiki/Finite-difference_time-domain_method) method, which has shown significant performance benefits when parallelised – particularly on GPU. We have solvers written using [PyCUDA](https://github.com/inducer/pycuda) and [PyOpenCL](https://github.com/inducer/pyopencl). The speed-up can be significant (x30 compared with CUDA compared to OpenMP parallelised CPU), but we would like to further tune and optimise the performance. 
 
 **Skills required:** Python, CUDA
 
@@ -23,24 +36,10 @@ The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wik
 
 **Length:** 175hrs
 
-<!--
-## 1. Multi-GPU model execution
 
-The aim of the project is to investigate multi-GPU model execution, i.e. allow a model to execute (and share memory) across multiple GPUs.
+## 3. Optimisation of OpenMP performance on Apple silicon hardware
 
-Currently with our GPU-based (PyCuda) solver, a model must fit within the memory of a single GPU. Simulations are becoming ever larger and more complex, which often means their memory requirements exceed that available on a single GPU. A solution is required to allow a model to execute (and share memory) across multiple GPUs. This may involve a MPI type domain decomposition or simpler memory sharing approach.
-
-**Skills required:** Python, CUDA
-
-**Difficulty:** Hard
-
-**Length:** 350hrs
--->
-
-
-## 2. Optimisation for Apple silicon CPUs
-
-The aim of this project is to maximise the performance of gprMax on Apple silicon CPUs.
+The aim of this project is to maximise the performance of gprMax on Apple silicon hardware.
 
 gprMax is predominately written in Python, but some of the performance-critical parts of the code are written in [Cython](https://cython.org), which must be built and compiled. For CPU-based parallelisation, Cython uses OpenMP, which has worked well on Intel-based CPUs using gcc (Linux/macOS) and Microsoft Visual Studio compilers. However, this project will explore how to best optimise gprMax for running on Apple silicon CPUs.
 
@@ -51,7 +50,7 @@ gprMax is predominately written in Python, but some of the performance-critical 
 **Length:** 175hrs
 
 
-## 3. Performance gains through memory usage and cache access
+## 4. Performance gains through memory usage and cache access
 
 The aim of this project is to optimise the performance of the CPU-based solver through investigation of memory and cache accessing.
 
@@ -64,7 +63,7 @@ gprMax is predominately written in Python, but some of the performance-critical 
 **Length:** 350hrs
 
 
-## 4. De-coupled model building and execution
+## 5. De-coupled model building and execution
 
 The aim of this project is to investigate de-coupling the model building and execution phases.
 
