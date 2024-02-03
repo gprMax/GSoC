@@ -11,7 +11,20 @@ Below is list of some potential project ideas (in no particular order). These id
 If a project is successfully selected you will be allocated a primary mentor and supported by the rest of the team. If you are interested in learning more about a particular project idea please contact us using [info@gprmax.com](mailto:info@gprmax.com) or on our [gprMax Slack channel](https://gprmax-fdtd.slack.com). 
 
 
-## 1. Apple Metal port
+## 1. AI Chatbot for support
+
+The aim of the project is to develop an AI chatbot that can handle basic questions and enquiries about gprMax.
+
+We currently have a vibrant user community that engage with the development team through our [GitHub issue tracker](https://github.com/gprMax/gprMax/issues) and our [Google group](https://groups.google.com/g/gprmax). This project will consider harvesting question and answer data from our Google group to train an AI chatbot that can provide automated responses to basic support questions about gprMax.
+
+**Skills required:** Python, machine learning
+
+**Difficulty:** Medium
+
+**Length:** 350hrs
+
+
+## 2. Apple Metal port
 
 The aim of the project is to develop an [Apple Metal](https://developer.apple.com/metal/) port. The performance (speed) of the solver is a critical feature as simulations become ever larger and more complex.
 
@@ -24,7 +37,7 @@ The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wik
 **Length:** 350hrs
 
 
-## 2. Optimisation of CUDA and OpenCL performance
+## 3. Optimisation of CUDA and OpenCL performance
 
 The aim of the project is to optimise our CUDA and OpenCL based solvers. The performance (speed) of the solver is a critical feature as simulations become ever larger and more complex.
 
@@ -37,7 +50,7 @@ The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wik
 **Length:** 175hrs
 
 
-## 3. Optimisation of OpenMP performance on Apple silicon hardware
+## 4. Optimisation of OpenMP performance on Apple silicon hardware
 
 The aim of this project is to maximise the performance of gprMax on Apple silicon hardware.
 
@@ -50,7 +63,7 @@ gprMax is predominately written in Python, but some of the performance-critical 
 **Length:** 175hrs
 
 
-## 4. Performance gains through memory usage and cache access
+## 5. Performance gains through memory usage and cache access
 
 The aim of this project is to optimise the performance of the CPU-based solver through investigation of memory and cache accessing.
 
@@ -63,7 +76,7 @@ gprMax is predominately written in Python, but some of the performance-critical 
 **Length:** 350hrs
 
 
-## 5. De-coupled model building and execution
+## 6. De-coupled model building and execution
 
 The aim of this project is to investigate de-coupling the model building and execution phases.
 
