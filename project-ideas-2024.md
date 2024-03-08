@@ -99,3 +99,18 @@ Currently the modeling building phase takes place (which is mostly a serial proc
 **Difficulty:** Hard
 
 **Length:** 350hrs
+
+
+## 7. AMD ROCm HIP port
+
+The aim of the project is to develop an [HIP](https://github.com/ROCm/HIP) port. The performance (speed) of the solver is a critical feature as simulations become ever larger and more complex.
+
+The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wikipedia.org/wiki/Finite-difference_time-domain_method) method, which has shown significant performance benefits when parallelised – particularly on GPU. The project will require porting existing code from the PyCUDA-based solver we already have, to the HIP API. There are automated translation tools, such as [HIPIFY](https://github.com/ROCm/HIPIFY) that can be used to support the process.
+
+**Expected outcomes:** An initial working port of the FDTD solver engine for gprMax using HIP.
+
+**Skills required:** Python, C
+
+**Difficulty:** Medium
+
+**Length:** 350hrs
