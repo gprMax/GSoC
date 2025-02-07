@@ -35,6 +35,8 @@ The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wik
 
 **Skills required:** Python, C
 
+**Hardware required:** You must have your own access to Apple hardware.
+
 **Difficulty:** Medium
 
 **Length:** 350hrs
@@ -49,6 +51,8 @@ The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wik
 **Expected outcomes:** An initial working port of the FDTD solver engine for gprMax using HIP.
 
 **Skills required:** Python, C
+
+**Hardware required:** You must have your own access to an AMD GPU.
 
 **Difficulty:** Medium
 
