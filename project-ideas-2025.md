@@ -6,6 +6,10 @@ Below is list of some potential project ideas (in no particular order). These id
 - Dr Craig Warren
 - Dr Antonis Giannopoulos
 - Dr Iraklis Giannakis
+- Miss Georgia Coote
+- Miss Petroula Karacosta
+- Mr Luke Macpherson
+- Mr Zach Wilson
 
 If a project is successfully selected you will be allocated a primary mentor and supported by the rest of the team. If you are interested in learning more about a particular project idea please contact us using [info@gprmax.com](mailto:info@gprmax.com) or on our [Zulip channel](https://gprmax.zulipchat.com/join/stpagw5qy775k7p2tcjkkk4q/). 
 
