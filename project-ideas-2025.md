@@ -61,3 +61,16 @@ The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wik
 **Difficulty:** Medium
 
 **Length:** 350hrs
+
+
+## 4. Implementation of a Near to Far Field Transformation (NFFT) calculation and output of relevant information
+
+The aim of this project is to implement a Near-to-far-field Transformation output process in gprMax based in well known theory and an existing algorithm. 
+
+NFFT outputs are needed when information of the electromagnetic field response is needed far away from the object of interest modelled in detail by gprMax using the FDTD numerical mehtod.Initially we need to implement such a process, which is well documented in the literature and algorithmically available, for objects located in a simple homogenous background. This feature will allow us to easily perform an number of additional modelling tasks like radar cross section (RCS) calcualtions and complicated antenna patterns that are not possible at the moment. 
+
+**Skills required:** Python
+
+**Difficulty:** Medium
+
+**Length:** 350hrs
