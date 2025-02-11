@@ -7,14 +7,14 @@ Below is list of some potential project ideas (in no particular order). These id
 - Dr Antonis Giannopoulos
 - Dr Iraklis Giannakis
 
-If a project is successfully selected you will be allocated a primary mentor and supported by the rest of the team. If you are interested in learning more about a particular project idea please contact us using [info@gprmax.com](mailto:info@gprmax.com) or on our [gprMax Slack channel](https://gprmax-fdtd.slack.com). 
+If a project is successfully selected you will be allocated a primary mentor and supported by the rest of the team. If you are interested in learning more about a particular project idea please contact us using [info@gprmax.com](mailto:info@gprmax.com) or on our [Zulip channel](https://gprmax.zulipchat.com/join/stpagw5qy775k7p2tcjkkk4q/). 
 
 
 ## 1. AI Chatbot for support
 
 This project will build upon the work done in the previous GSoC where an AI chatbot was developed capable of answering questions and assisting on building models with gprMax. For more information you can check the following [link](https://github.com/eddieleejw/gprmax_chatbot).
 
-The developed chatbot is based on ChatGPT from OpenAI, therefore it is not free. The current project will aim at building light chatbots using open-source LLMs such as Lama and Deepsheek, in order to provide a free and computatinally cheap chatbot for gprMax. 
+The developed chatbot is based on ChatGPT from OpenAI, therefore it is not free. The current project will aim at building light chatbots using open-source LLMs such as Lama and Deepsheek, in order to provide a free and computationally cheap chatbot for gprMax. 
 
 Moreover, the next generation of gprMax AI chatbots will be capable of building models automatically based on some given instructions. We currently have a [set of gprMax commands](https://huggingface.co/datasets/IraGia/gprMax_Train) that we can use to fine-tune open-source LLMs. 
 
