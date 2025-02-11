@@ -12,11 +12,15 @@ If a project is successfully selected you will be allocated a primary mentor and
 
 ## 1. AI Chatbot for support
 
-The aim of the project is to develop an AI chatbot that can handle basic questions and enquiries about gprMax.
+This project will build upon the work done in the previous GSoC where an AI chatbot was developed capable of answering questions and assisting on building models with gprMax. For more information you can check the following [link]{https://github.com/eddieleejw/gprmax_chatbot}.
 
-We currently have a vibrant user community that engage with the development team through our [GitHub issue tracker](https://github.com/gprMax/gprMax/issues) and our [Google group](https://groups.google.com/g/gprmax). This project will consider harvesting question and answer data from our Google group to train an AI chatbot that can provide automated responses to basic support questions about gprMax.
+The developed chatbot is based on ChatGPT from OpenAI, therefore it is not free. The current project will aim at building light chatbots using open-source LLMs such as Lama and Deepsheek, in order to provide a free and computatinally cheap chatbot for gprMax. 
 
-**Expected outcomes:** A functional AI chatbot that can handle basic gprMax support queries.
+Moreover, the next generation of gprMax AI chatbots will be capable of building models automatically based on some given instructions. We currently have a [set of gprMax commands]{https://huggingface.co/datasets/IraGia/gprMax_Train} that we can use to fine-tune open-source LLMs. 
+
+To summarise, this project will aim at building AI chatbots based on open-source LLMs, and fine-tune them not only to answer questions related to gprMax, but also to automatically build full gprMax models based on simple and intuitive instrustions by the user.
+
+**Expected outcomes:** A functional AI chatbot based on open-source LLMs capable of automatically developing gprMax models using simple written commands.
 
 **Skills required:** Python, machine learning
 
