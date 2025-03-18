@@ -18,7 +18,7 @@ If a project is successfully selected you will be allocated a primary mentor and
 
 This project will build upon the work done in the previous GSoC where an AI chatbot was developed capable of answering questions and assisting on building models with gprMax. For more information you can check the following [link](https://github.com/eddieleejw/gprmax_chatbot).
 
-The developed chatbot is based on ChatGPT from OpenAI, therefore it is not free. The current project will aim at building light chatbots using open-source LLMs such as Lama and Deepsheek, in order to provide a free and computationally cheap chatbot for gprMax. 
+The developed chatbot is based on ChatGPT from OpenAI, therefore it is not free. The current project will aim at building light chatbots using open-source LLMs such as Lama and DeepSeek, in order to provide a free and computationally cheap chatbot for gprMax. 
 
 Moreover, the next generation of gprMax AI chatbots will be capable of building models automatically based on some given instructions. We currently have a [set of gprMax commands](https://huggingface.co/datasets/IraGia/gprMax_Train) that we can use to fine-tune open-source LLMs. 
 
