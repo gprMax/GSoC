@@ -4,7 +4,7 @@ gprMax is hoping to participate in the [Google Summer of Code](https://summerofc
 
 Below is list of some potential project ideas (in no particular order). These ideas have been discussed with all mentors in our team: 
 - Dr Craig Warren
-- Dr Antonis Giannopoulos
+- Professor Antonis Giannopoulos
 - Dr Iraklis Giannakis
 - Miss Georgia Coote
 - Miss Petroula Karacosta
