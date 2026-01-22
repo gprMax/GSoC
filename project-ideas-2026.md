@@ -1,6 +1,6 @@
 # GSoC 2026 - Project Ideas List
 
-gprMax is hoping to participate in the [Google Summer of Code](https://summerofcode.withgoogle.com) 2025 program, following successful GSoCs in 2019, 2021, 2023, 2024, and 2025. 
+gprMax is hoping to participate in the [Google Summer of Code](https://summerofcode.withgoogle.com) 2026 program, following successful GSoCs in 2019, 2021, 2023, 2024, and 2025. 
 
 Below is list of some potential project ideas (in no particular order). These ideas have been discussed with all mentors in our team: 
 - Dr Craig Warren
