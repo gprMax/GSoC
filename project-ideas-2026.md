@@ -33,7 +33,7 @@ AI tools can be wonderful for checking grammar, improving clarity, exploring ide
 The proposal process helps us match contributors with projects where they'll thrive and learn. When your proposal authentically represents your skills and interests, we can create better mentorship pairings and set everyone up for a successful, rewarding summer. We're excited to see your genuine ideas and to support your growth throughout GSoC.
 
 
-## 1. GPU Acceleration of Plane Wave Source Formulations in gprMax
+## Project 1. GPU Acceleration of Plane Wave Source Formulations in gprMax
 
 gprMax is one of the few open-source FDTD solvers that leverages a ragne of GPUs to accelerate the main FDTD update kernels. 
 However, our relatively new addition of a Plane Wave (TF/SF) excitation source, using the Discrete Plane Wave (DPW) formulation, 
@@ -46,7 +46,7 @@ and maximizing throughput.
 **Objectives & Deliverables:**
 Develop GPU kernels - prioritising CUDA - to handle the injection of the incident field at the TF/SF interfaces.
 Move the DPW 1D FDTD auxiliary Cython update (used to calculate the incident field) to the GPU.
-Optimize the storage, as needed, of the TF/SF boundary fields to ensure coalesced memory access during the main update loop.
+Optimise the storage, as needed, of the TF/SF boundary fields to ensure coalesced memory access during the main update loop.
 Create a small testing suite of simple models to compare the GPU-accelerated plane wave results against the existing Cython implementation to ensure numerical consistency.
 
 **Expected outcome:** Enable the use of TF/SF sources when the user executes gprMax on a GPU 
@@ -58,7 +58,7 @@ Create a small testing suite of simple models to compare the GPU-accelerated pla
 **Length:** 350 hours
 
 
-## 2. Reactive Simulation & Analytics: Integrating marimo with gprMax
+## Project 2. Reactive Simulation & Analytics: Integrating marimo with gprMax
 
 gprMax users typically interact with the software via terminal commands or by using
 static Jupyter notebooks. Although, Jupyter notebooks are very convenient workflows based on them can 
@@ -69,7 +69,7 @@ This project aims to build a reactive, web-based dashboarding interface for gprM
 
 By integrating marimo, we will provide users with a new concept of a "computational notebook" that doubles 
 as an interactive GUI for building models, monitoring simulations in real-time, and performing 
-simple data post-processing (A-scan/B-scan analysis) with synchronized plotting. The aim is to build an 
+simple data post-processing (A-scan/B-scan analysis) with synchronised plotting. The aim is to build an 
 initial framework that can also be easily extended in future by its users. 
 
 
@@ -85,6 +85,42 @@ Create a set of "Reactive Recipes" for common modelling and data analysis scenar
 
 **Skills required:** Python and good proficiency in numerical stacks (e.g. NumPy, Pandas, H5py), Experience with reactive programming concepts (preferably using marimo). 
 Familiarity with data visualisation using Python (Plotly, Matplotlib, or Bokeh). Some basic understanding of GPR related gprMax outputs (A-Scans, B-Scans, etc.)
+
+**Difficulty:** Medium
+
+**Length:** 350 hours
+
+
+## Project 3. Building a Comprehensive Test Suite
+
+Currently, the project lacks comprehensive automated testing, making it difficult to catch bugs and verify that code changes work correctly. This project will create a solid foundation of automated tests to make gprMax more reliable and easier to develop.
+
+**Objectives & Deliverables:**
+Write unit tests for core gprMax functions
+Create validation tests that check if physics calculations are correct
+Make sure tests work on different operating systems (Windows, Linux, macOS)
+
+**Expected outcome:** A working test suite with tests covering the most important parts of gprMax, making it safer and easier for developers to improve the code. 
+
+**Skills required:** Python, basic familiarity with testing (pytest is a bonus) 
+
+**Difficulty:** Medium
+
+**Length:** 350 hours
+
+
+## Project 4. Implementing CI/CD Automation
+
+This project will modernise gprMax's development workflow by implementing Continuous Integration and Continuous Deployment (CI/CD) using GitHub Actions. You'll automate testing, improve the build process, and make it easier for new contributors to participate in the project.
+
+**Objectives & Deliverables:**
+GitHub Actions workflows that automatically test code changes
+Pre-commit hooks and automated code quality checks
+Refactored build scripts supporting different backends (CPU-only, MPI, CUDA)
+
+**Expected outcome:** An automated development pipeline that reduces manual work, speeds up code reviews, and makes gprMax more accessible to both contributors and users. 
+
+**Skills required:** Python, GitHub workflows 
 
 **Difficulty:** Medium
 
