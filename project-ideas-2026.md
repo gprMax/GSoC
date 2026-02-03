@@ -11,71 +11,81 @@ Below is list of some potential project ideas (in no particular order). These id
 
 If a project is successfully selected you will be allocated a primary mentor and supported by the rest of the team. If you are interested in learning more about a particular project idea please contact us using [info@gprmax.com](mailto:info@gprmax.com) or on our [Zulip channel](https://gprmax.zulipchat.com/join/stpagw5qy775k7p2tcjkkk4q/). 
 
-<!-- ## Guidance on use of AI -->
+## Statement on Responsible Use of AI in GSoC 2026 for gprMax
+
+We understand that AI tools like large language models have become helpful resources in many aspects of work and learning, including proposal writing. We want to support you in using these tools responsibly while ensuring your proposal genuinely represents you.
+
+**Ways AI Can Help:**
+AI tools can be wonderful for checking grammar, improving clarity, exploring ideas, learning new concepts, and refining your writing. We encourage you to use these tools as learning partners that help you develop and express your ideas more effectively.
+
+**What We're Looking For:**
+- Proposals that reflect your authentic understanding and enthusiasm for the project
+- Technical approaches that align with your actual skill level and that you're prepared to implement
+- A genuine sense of who you are as a contributor and what you bring to the project
+- Transparency about your capabilities so mentors can provide appropriate guidance and support
+
+**What to Avoid:**
+- Relying on AI to generate content you don't fully understand or can't explain
+- Presenting technical solutions or experience levels that don't match your actual abilities
+- Submitting work that doesn't reflect your own voice and thinking
+
+**Why This Matters:**
+The proposal process helps us match contributors with projects where they'll thrive and learn. When your proposal authentically represents your skills and interests, we can create better mentorship pairings and set everyone up for a successful, rewarding summer. We're excited to see your genuine ideas and to support your growth throughout GSoC.
 
 
+## 1. GPU Acceleration of Plane Wave Source Formulations in gprMax
 
-<!-- ## 1. AI Chatbot for support
+gprMax is one of the few open-source FDTD solvers that leverages a ragne of GPUs to accelerate the main FDTD update kernels. 
+However, our relatively new addition of a Plane Wave (TF/SF) excitation source, using the Discrete Plane Wave (DPW) formulation, 
+that was initially developed during a previous GSoC project, remains as an only CPU-based solver implementation using Cython. 
 
-This project will build upon the work done in the previous GSoC where an AI chatbot was developed capable of answering questions and assisting on building models with gprMax. For more information you can check the following [link](https://github.com/eddieleejw/gprmax_chatbot).
+This project aims to port this (TF/SF) plane wave injection source to the GPU solvers of gprMax, 
+ensuring that the entire simulation pipeline remains on the GPU, minimizing data transfer between CPU and GPU 
+and maximizing throughput.
 
-The developed chatbot is based on ChatGPT from OpenAI, therefore it is not free. The current project will aim at building light chatbots using open-source LLMs such as Lama and DeepSeek, in order to provide a free and computationally cheap chatbot for gprMax. 
+**Objectives & Deliverables:**
+Develop GPU kernels - prioritising CUDA - to handle the injection of the incident field at the TF/SF interfaces.
+Move the DPW 1D FDTD auxiliary Cython update (used to calculate the incident field) to the GPU.
+Optimize the storage, as needed, of the TF/SF boundary fields to ensure coalesced memory access during the main update loop.
+Create a small testing suite of simple models to compare the GPU-accelerated plane wave results against the existing Cython implementation to ensure numerical consistency.
 
-Moreover, the next generation of gprMax AI chatbots will be capable of building models automatically based on some given instructions. We currently have a [set of gprMax commands](https://huggingface.co/datasets/IraGia/gprMax_Train) that we can use to fine-tune open-source LLMs. 
+**Expected outcome:** Enable the use of TF/SF sources when the user executes gprMax on a GPU 
 
-To summarise, this project will aim at building AI chatbots based on open-source LLMs, and fine-tune them not only to answer questions related to gprMax, but also to automatically build full gprMax models based on simple and intuitive instrustions by the user.
-
-**Expected outcomes:** A functional AI chatbot based on open-source LLMs capable of automatically developing gprMax models using simple written commands.
-
-**Skills required:** Python, machine learning
-
-**Difficulty:** Medium
-
-**Length:** 350hrs
-
-
-## 2. Apple Metal port
-
-The aim of the project is to develop an [Apple Metal](https://developer.apple.com/metal/) port. The performance (speed) of the solver is a critical feature as simulations become ever larger and more complex.
-
-The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wikipedia.org/wiki/Finite-difference_time-domain_method) method, which has shown significant performance benefits when parallelised – particularly on GPU. The project will require building on the already existing initial Apple Metal port and developing and testing it to ensure all main features in gprMax execute correctly and efficiently.
-
-**Expected outcomes:** A working port of the FDTD solver engine for gprMax using Apple Metal.
-
-**Skills required:** Python, C
-
-**Hardware required:** You must have your own access to Apple hardware.
-
-**Difficulty:** Medium
-
-**Length:** 350hrs
-
-
-## 3. AMD ROCm HIP port
-
-The aim of the project is to develop an [HIP](https://github.com/ROCm/HIP) port. The performance (speed) of the solver is a critical feature as simulations become ever larger and more complex.
-
-The solver is based on the [Finite-Difference Time-Domain (FDTD)](https://en.wikipedia.org/wiki/Finite-difference_time-domain_method) method, which has shown significant performance benefits when parallelised – particularly on GPU. The project will require porting existing code from the PyCUDA-based solver we already have, to the HIP API. There are automated translation tools, such as [HIPIFY](https://github.com/ROCm/HIPIFY) that can be used to support the process.
-
-**Expected outcomes:** An initial working port of the FDTD solver engine for gprMax using HIP.
-
-**Skills required:** Python, C
-
-**Hardware required:** You must have your own access to an AMD GPU.
+**Skills required:** Python, GPU programming using Python bindings 
 
 **Difficulty:** Medium
 
-**Length:** 350hrs
+**Length:** 350 hours
 
 
-## 4. Implementation of a Near to Far Field Transformation (NFFT) calculation and output of relevant information
+## 2. Reactive Simulation & Analytics: Integrating marimo with gprMax
 
-The aim of this project is to implement a Near-to-far-field Transformation output process in gprMax based in well known theory and an existing algorithm. 
+gprMax users typically interact with the software via terminal commands or by using
+static Jupyter notebooks. Although, Jupyter notebooks are very convenient workflows based on them can 
+lead to errors when parameters are changed out of order and feel cumbersome to the user. Equally, terminal 
+based execution does not allow for an integrated simulation experience as it offers very limited data analysis.
+ 
+This project aims to build a reactive, web-based dashboarding interface for gprMax using [marimo](https://marimo.io/).
 
-NFFT outputs are needed when information of the electromagnetic field response is needed far away from the object of interest modelled in detail by gprMax using the FDTD numerical mehtod.Initially we need to implement such a process, which is well documented in the literature and algorithmically available, for objects located in a simple homogenous background. This feature will allow us to easily perform an number of additional modelling tasks like radar cross section (RCS) calcualtions and complicated antenna patterns that are not possible at the moment. 
+By integrating marimo, we will provide users with a new concept of a "computational notebook" that doubles 
+as an interactive GUI for building models, monitoring simulations in real-time, and performing 
+simple data post-processing (A-scan/B-scan analysis) with synchronized plotting. The aim is to build an 
+initial framework that can also be easily extended in future by its users. 
 
-**Skills required:** Python
+
+**Objectives & Deliverables:**
+Create a marimo-based UI where users can adjust physical parameters (permittivity, geometry, antenna position) via sliders and see the gprMax commands or API calls 
+or model preview update instantly.
+Develop a reactive hook to track gprMax log files or output arrays, updating a progress bar and some selected field-preview within the notebook.
+Build a library of marimo-native components for gprMax post-processing, including:
+Create a set of "Reactive Recipes" for common modelling and data analysis scenarios (e.g., A-Scan or B-Scan modelling, Antenna parameters calculations, etc.).
+
+
+**Expected outcome:** A reactive notebook interface for better user experience and easier adoption of gprMax for electromagnetic simulations.
+
+**Skills required:** Python and good proficiency in numerical stacks (e.g. NumPy, Pandas, H5py), Experience with reactive programming concepts (preferably using marimo). 
+Familiarity with data visualisation using Python (Plotly, Matplotlib, or Bokeh). Some basic understanding of GPR related gprMax outputs (A-Scans, B-Scans, etc.)
 
 **Difficulty:** Medium
 
-**Length:** 350hrs -->
+**Length:** 350 hours
