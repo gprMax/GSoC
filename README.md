@@ -1,5 +1,3 @@
-<img src="images/gprMax_logo.png" height="75"><img src="images/GSoC2022_logo.png" height="75">
-
 # 🚀 gprMax @ Google Summer of Code
 
 Welcome to the home of [gprMax](https://www.gprmax.com)'s [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/) journey!
